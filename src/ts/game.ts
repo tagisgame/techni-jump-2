@@ -7,6 +7,7 @@
 import 'phaser';
 import Stats from 'stats-js';
 import Preload from './scenes/Preload';
+import Images from './consts';
 
 /** Configuration of the game */
 const gameConfig: Phaser.Types.Core.GameConfig = {

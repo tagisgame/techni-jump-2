@@ -1,11 +1,13 @@
 {
-    "complierOptions": {
+    "compilerOptions": {
         "target": "es6",
         "strict": true,
         "typeRoots": [ "./node_modules/@types" ],
         "moduleResolution": "node",
-        "types": [ "node" ]
+        "types": [ "node" ],
+        "esModuleInterop": true,
+        "explainFiles": true
     },
-    "include": ["src/ts/*", "./node_modules/@types/node/index.d.ts"],
+    "include": ["src/ts/*", "./node_modules/@types/node/index.d.ts", "*.ts"],
     "exclude": []
 }
