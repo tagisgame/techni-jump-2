@@ -30,5 +30,6 @@
   "staticFiles": {
     "staticPath": "src/assets",
     "staticOutPath": "assets"
-  }
+  },
+  "license": "GPL-2.0-only"
 }
