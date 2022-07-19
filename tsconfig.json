@@ -6,7 +6,8 @@
         "moduleResolution": "node",
         "types": [ "node" ],
         "esModuleInterop": true,
-        "explainFiles": true
+        "explainFiles": true,
+        "strictPropertyInitialization": false
     },
     "include": ["src/ts/*", "./node_modules/@types/node/index.d.ts", "*.ts"],
     "exclude": []

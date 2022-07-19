@@ -5,15 +5,17 @@
  */
 
 import 'phaser';
+import DevTools from './modules/devTools';
 import Stats from 'stats-js';
-import Preload from './scenes/Preload';
-import Images from './consts';
+import PreloadingScene from './scenes/PreloadingScene';
+import LoadingScene from './scenes/LoadingScene';
+import TrackScene from './scenes/TrackScene';
 
 /** Configuration of the game */
 const gameConfig: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
-    width: 854,
-    height: 480,
+    width: 640,
+    height: 360,
     physics: {
         default: 'arcade',
         arcade: {
@@ -28,7 +30,7 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
     render: {
         pixelArt: true
     },
-    scene: [Preload]
+    scene: [PreloadingScene, LoadingScene, TrackScene]
 }
 
 /** Booting the game */
@@ -41,7 +43,7 @@ window.onload = () => {
     window.addEventListener('resize', () => rescale(game), false);
 
     // setup the stats when environemnt is development
-    if (isInDevelopment()) setupStatsJS(game);
+    if (DevTools.isInDevEnv()) setupStatsJS(game);
 }
 
 /**
@@ -54,15 +56,6 @@ function rescale(game: Phaser.Game): void {
     const zoomY = Math.floor(window.innerHeight / game.scale.height);
     const zoom = Math.min(zoomX, zoomY);
     game.scale.setZoom(zoom);
-}
-
-/** 
- * Returns true if the environment is developement
- * 
- * @return {boolean} is in development
- */
-function isInDevelopment(): boolean {
-    return process.env.NODE_ENV === 'development';
 }
 
 /**

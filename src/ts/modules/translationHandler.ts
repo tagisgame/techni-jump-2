@@ -6,5 +6,6 @@
 
 import 'phaser';
 
-export default class Preload extends Phaser.Scene {
+export default class TranslationHandler {
+    // TODO: Module that handles the translations
 }

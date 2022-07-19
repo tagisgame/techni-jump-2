@@ -24,8 +24,9 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "stats-js": "^1.0.1",
-    "phaser": "^3.55.2"
+    "@azerion/phaser-i18next": "^1.0.3",
+    "phaser": "^3.55.2",
+    "stats-js": "^1.0.1"
   },
   "staticFiles": {
     "staticPath": "src/assets",
