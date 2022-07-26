@@ -5,10 +5,14 @@
  */
 
 /** Static images imports */
-import * as creatorsLogoPath from './../assets/images/creators.png';
+import * as TestFloorPath from './../assets/images/testfloor.jpg';
 
 export const Images = {
     /** type: <Phaser.Types.Loader.FileTypes.ImageFileConfig> */
+    TestFloor: <Phaser.Types.Loader.FileTypes.ImageFileConfig> {
+        key: 'testfloor',
+        url: TestFloorPath
+    }
 }
 
 /** Spritesheets imports */
@@ -21,7 +25,7 @@ export const Spritesheets = {
     Player: <Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig> {
         key: 'player', /** unique key of object in game */
         url: playerPath,
-        frameConfig: {frameWidth: 32, frameHeight: 32, margin: 0, spacing: 0}
+        frameConfig: {frameWidth: 16, frameHeight: 16, margin: 0, spacing: 0}
     }
 }
 

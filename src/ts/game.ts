@@ -14,12 +14,12 @@ import TrackScene from './scenes/TrackScene';
 /** Configuration of the game */
 const gameConfig: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
-    width: 640,
-    height: 360,
+    width: 426,
+    height: 240,
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 200 }
+            gravity: { y: 500 }
         }
     },
     scale: {

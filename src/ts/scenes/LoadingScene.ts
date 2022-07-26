@@ -7,8 +7,6 @@
 import 'phaser';
 import {Images, Spritesheets, Tilesets, Tilemaps, Sound, Lang, Preloaded} from '../assetsConstants';
 import DevTools from '../modules/devTools';
-import TranslationHandler from '../modules/translationHandler'
-import Player from '../modules/Player';
 
 interface LoadingScreenObj {
     percentageText: Phaser.GameObjects.Text,
@@ -57,7 +55,7 @@ export default class LoadingScene extends Phaser.Scene {
 
         /** Loading the assets from constants file */
         Object.values(Images).forEach(value => {
-            //this.load.image(value);
+            this.load.image(value);
         });
         Object.values(Spritesheets).forEach(value => {
             this.load.spritesheet(value);
